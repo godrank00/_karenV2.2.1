@@ -1,0 +1,163 @@
+.modal-checkbox{
+    display: none;
+}
+.button-close{
+    display: none;
+}
+.modal-contact-button{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+    margin-bottom: var(--space-sm);
+}
+.modal-container{
+    position: fixed;
+    pointer-events: none;
+    right: var(--space-lg);
+    bottom: calc(var(--space-lg) + 45px);
+    z-index: 9999;
+}
+.modal-container >*{
+    pointer-events: auto;
+}
+
+.modal-float-button{
+    position: relative;
+    display: flex;            
+    align-items: center; 
+    justify-content: center;
+    background-color: #f43904;
+    width: 54px;
+    height: 54px;
+    padding: var(--space-sm);
+    border-radius: var(--radius-xl);
+    animation: modal-shadow-spin 4s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.button-close{
+    width: 25px;
+    height: 25px;
+}
+.modal-checkbox:checked ~ .modal-float-button .button-open{
+    display: none;
+}
+.modal-checkbox:checked ~ .modal-float-button .button-close{
+    display: block;
+}
+
+.modal-contact{
+    width: 54px;
+    height: 54px;
+    background-color: black;
+}
+
+@keyframes modal-shadow-spin {
+    0% {
+        box-shadow: 0 0 0 rgba(244, 57, 4, 0);
+    }
+
+    20% {
+        box-shadow: 0 0 20px rgba(244, 57, 4, 0.8);
+    }
+    
+    40% {
+        box-shadow: 0 0 20px rgba(244, 57, 4, 0.8);
+    }
+    60% {
+        box-shadow: 0 0 20px rgba(244, 57, 4, 0);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(244, 57, 4, 0);
+    }
+}
+.modal-contact{
+    border-radius: var(--radius-xl);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-checkbox:checked ~ .modal-contact-button{
+    visibility: visible;
+    opacity: 1;
+}
+.modal-checkbox:checked ~ .modal-contact-button .moadl-instagram{
+    transform: translateY(0);
+}
+.modal-checkbox:checked ~ .modal-contact-button .modal-whatsapp{
+    transform: translateY(0);
+}
+.modal-checkbox:checked ~ .modal-contact-button .modal-telegram{
+    transform: translateY(0);
+}
+.modal-checkbox:checked ~ .modal-contact-button .modal-advising{
+    transform: translateY(0);
+}
+.modal-checkbox:checked ~ .modal-contact-button .modal-shopping-cart{
+    transform: translateY(0);
+}
+
+.moadl-instagram{
+    transform: translateY(62px);
+    transition: all .3s ease-in-out 10ms;
+    background-color: #7a1e99
+}
+.modal-whatsapp{
+    transform: translateY(124px);
+    transition: all .3s ease-in-out 20ms;
+    background-color: #0a9a11
+}
+.modal-telegram{
+    transform: translateY(186px);
+    transition: all .3s ease-in-out 30ms;
+    background-color: #0ca8fc
+}
+.modal-advising{
+    transform: translateY(248px);
+    transition: all .3s ease-in-out 40ms;
+    background-color: #064296
+}
+.modal-shopping-cart{
+    transform: translateY(310px);
+    transition: all .3s ease-in-out 50ms;
+    background-color: #f43904;
+}
+.modal-brands{
+    font-size: var(--fs-2xl);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    width: fit-content;
+}
+.fa-whatsapp::before{
+    content: "\f232";
+}
+.fa-instagram::before{
+    content: "\f16d";
+}
+.fa-telegram::before{
+    content: "\f2c6";
+}
+.fa-advising::before{
+    content: "\f095";
+}
+.fa-shopping-cart::before{
+    content: "\f07a";
+}
+.modal-contact-text{
+    position: absolute;
+    top: 10px;
+    right: 65px;
+    width: max-content;
+    font-size: 14px;
+    font-weight: var(--fw-bold);
+    padding: 5px 15px;
+    background-color: #cfcfcf;
+    box-shadow: 0px 1px 10px rgb(0 0 0 / 10%);
+    border-radius: var(--radius-md);
+    color: #141414;
+}

@@ -1,0 +1,110 @@
+.slider-container{
+        overflow-x: auto;
+        padding-bottom: var(--space-2xl);
+        height: fit-content;
+        width: 100%;
+        scroll-snap-type: x mandatory;
+        /* scroll-behavior: smooth; */
+}
+.slider-container::-webkit-scrollbar{
+    display: none;
+}
+.slider-layout{
+    display: flex;
+    /* justify-content: center; */
+    gap: var(--space-md);
+}
+.slider-layout li{
+    flex: 0 0 48% ;
+}
+.slider-item:hover{
+    padding-top: var(--space-lg);
+}
+.slider-item:hover .slider-link{
+    color: #fff; 
+    box-shadow: 0 3px #0a005140;
+    background-color: #0a0051;
+    
+}
+.slider-item:hover .slider-title{
+    margin-bottom: var(--space-lg);
+    
+}
+
+.slider-image{
+    width: 60px;
+    margin-bottom: var(--space-lg);
+}
+.slider-title{
+    margin-bottom: var(--space-md);
+    font-weight: 800;
+    transition: all 0.1s ease-in-out;
+}
+.slider-link{
+    display: none;
+    padding: 7px 15px 5px;
+    border-radius: 8px;
+    transition: all 0.1s ease-in-out;
+}
+.slider-item{
+    box-shadow: 0 30px 40px -15px #ced4d7;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    border-radius: var(--radius-xl);
+    padding-block: var(--space-md);
+    font-size: var(--fs-xs);
+    background-color: var(--bg-main);
+    width: 100%;
+}
+
+@media screen and (min-width: 577px) {
+    .slider-container{
+        transform: translateY(-11%);
+    }
+}
+
+@media screen and (min-width: 768px){
+    .slider-image{
+        width: 108px;
+    }
+    .slider-link{
+        display: block;
+    }
+    .slider-title{
+        font-size: var(--fs-lg);
+    }
+    .slider-link{
+        font-size: var(--fs-sm);
+    }
+    .slider-container{
+        transform: translateY(-8%);
+
+    }
+    .slider-item{
+        padding-block: var(--space-xl);
+        transition: all 0.1s ease-in-out;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    .slider-layout li{
+        flex: 0 0 24% ;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .slider-layout li{
+        flex: 0 0 11% ;
+    }
+}
+
+.slider-container {
+  will-change: scroll-position;
+  -webkit-overflow-scrolling: touch;
+}

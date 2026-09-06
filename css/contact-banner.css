@@ -1,0 +1,171 @@
+.contact-banner-container{
+    background: url(../assets/images/banner-bg.png) center no-repeat #a0aeae;
+    margin-bottom: 80px;
+}
+
+.contact-banner{
+    display: flex;
+    gap: var(--space-lg);
+    height: 143px;
+}
+
+.contact-banner-left{
+    position: relative;
+    text-shadow: 0 2px 3px rgb(78, 91, 91);
+}
+
+.contact-banner>*{
+    flex: 1 1 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.contact-banner-flag{
+    position: absolute;
+    left: 0;
+    bottom: -17px;
+}
+
+.contact-banner-tel{
+    direction: ltr;
+    margin-left: 150px;
+    color: #fff;
+}
+.contact-banner-tel-a{
+    font-weight: var(--fw-bold);
+    font-size: 40px;
+    line-height: 1.1;
+}
+.contact-banner-tel-a .code{
+    font-size: 30px;
+}
+
+.contact-text{
+    font-size: 15px;
+    font-weight: var(--fw-bold);
+    white-space: nowrap;
+}
+
+.contact-banner-right{
+    justify-content: start;
+    width: 100%;
+}
+.contact-banner-icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    width: 100%;
+}
+.contact-banner-container{
+    width: 100%;
+}
+.contact-icon{
+    display: flex;
+    gap: var(--space-md);
+    color: #fff;
+    text-shadow: 0 2px 3px rgb(78, 93, 93);
+}
+.contact-banner-text{
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+}
+
+.contact-banner-icon{
+    width: 48px;
+    height: 48px;
+}
+
+.title{
+   font-weight: var(--fw-regular); 
+   font-size: 13px;
+}
+
+.name{
+    font-weight: var(--fw-bold);
+    font-size: 18px;
+}
+
+.contact-icon:hover .contact-banner-text{
+    width: 80px;
+    visibility: visible;
+    opacity: 1;
+}
+.contact-icon:last-child:hover .contact-banner-text{
+    width: 110px;
+}
+
+@media screen and (max-width: 900px){
+    .contact-banner-container{
+        height: 120px;
+    }
+    .contact-banner{
+        height: 100%;
+    }
+    .contact-banner-flag{
+        display: none;
+    }
+
+    .contact-banner-tel{
+        margin-left: 0;
+    }
+    .code{
+        font-size: 22px !important;
+    }
+    .number{
+        font-size: 26px;
+    }
+    .contact-text{
+        font-size: 13px;
+    }
+    .contact-banner-icon{
+        width: 40px;
+        height: 40px;
+    }
+    .contact-banner-text{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 666px){
+    .contact-banner-container{
+        margin-inline: auto;
+        width: 85%;
+        border-radius: 14px;
+    }
+    .contact-text{
+        white-space: wrap;
+    }
+    .contact-banner-tel{
+        text-align: center;
+    }
+    .contact-banner-icons, .contact-banner-left{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .contact-banner{
+        gap: var(--space-md);
+    }
+    .contact-banner-container{
+        height: max-content;
+    }
+    .contact-banner{
+        flex-direction: column;
+        
+    }
+    .contact-banner-right{
+        align-items: center;
+        margin-top: var(--space-md);
+    }
+    .contact-banner-left{
+        margin-bottom: var(--space-md);
+    }
+    
+}

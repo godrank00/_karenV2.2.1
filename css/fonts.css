@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'YekanBakhFaNum';
+    src: url('../assets/fonts/YekanBakhFaNum-Light.woff') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YekanBakhFaNum';
+    src: url('../assets/fonts/YekanBakhFaNum-Regular.woff') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YekanBakhFaNum';
+    src: url('../assets/fonts/YekanBakhFaNum-SemiBold.woff') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'YekanBakhFaNum';
+    src: url('../assets/fonts/YekanBakhFaNum-Bold.woff') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Icons1';
+  src: url('../assets/fonts/royal-icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'fa-brands';
+  src: url('../assets/fonts/fa-brands-400.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'fa-brands';
+  src: url('../assets/fonts/fa-solid-900.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'Icons1' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="fa-"], [class*=" fa-"],
+.fab { 
+  font-family: 'fa-brands' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-menu::before {
+  content: "\e900";
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+}
+
+.fa-whatsapp{
+  content: "\f232";
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+}
+.fa-instagram{
+  content: "\f16d";
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+}
+.fa-telegram{
+  content: "\f2c6";
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+}
+.fa-advising{
+  content: "\f095";
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+}
+.fa-shopping-cart{
+  content: "\f07a";
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+}

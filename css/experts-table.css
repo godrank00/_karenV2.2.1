@@ -1,0 +1,223 @@
+/* best products */
+.experts-table-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-2xl);
+    column-gap: 0;
+    margin-bottom: 50px;
+}
+.best-products-title >* {
+    text-align: center;
+}
+.best-products-title div:nth-child(1) {
+    font-size: var(--space-md);
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+}
+.best-products-title div:nth-child(2) {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-base);
+    margin-bottom: var(--space-md);
+}
+.experts-table-item{
+    flex: 1 1 0;
+    gap: var(--space-sm);
+    display: flex;
+    flex-direction: column;
+}
+.best-products-items{
+    display: flex;
+    flex: 1 1 0;
+    gap: var(--space-lg);
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    box-shadow: 0 1px 1px rgba(46, 76, 91, 0.23);
+    background-color: #f9fafa;
+    width: 100%;
+    min-height: 56px;
+    font-size: 11px;
+    font-weight: var(--fw-bold);
+    border-radius: var(--radius-sm);
+    transition: 0.3s;
+}
+.best-products-items-price{
+    display: flex;
+    gap: var(--space-xs);
+    align-items: center;
+}
+
+.currency {
+    font-size: 9px;
+}
+
+@media screen and (min-width: 640px){
+    .best-products-items{
+        font-size: 13px;
+    }
+    .currency {
+        font-size: var(--fs-xs);
+    }
+}
+
+/* experts */
+.experts-contact-container{
+    position: relative;
+    height: 100px;
+}
+.expert-radio{
+    display: none;
+}
+.experts-item1{
+    height: 38px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 2px rgba(46, 76, 91, 0.23);
+    background: #f9fafa;
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    font-weight: 800;
+    padding: 0 var(--space-lg);
+}
+
+.experts-item2{
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.rubber-inner{
+    overflow-x: auto;
+    display: flex;
+    gap: calc((100% - 300px) / 2);
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.expert-table-buttons{
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+.expert-table-buttons img{
+    width: 100px;
+}
+.experts-item2::-webkit-scrollbar {
+    display: none;
+}
+.rubber-inner::-webkit-scrollbar {
+    display: none;
+}
+.experts-item2 {
+    margin-block: var(--space-md);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.experts-contact{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background: #eef2f2;
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.96);
+    transition: .5s;
+}
+.experts-contact >*{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.expert-name{
+    font-size: 19px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 5px;
+    margin-bottom: var(--space-sm);
+}
+
+.expert-skill{
+    font-size: var(--fs-xs);
+    margin-bottom: var(--space-sm);
+}
+
+.experts-number{
+    align-items: end;
+}
+.expert-phone{
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    margin-bottom: 5px;
+}
+.expert-inner-number{
+    width: max-content;
+    border-radius: var(--radius-sm);
+    color: #fff;
+    padding: var(--space-xs) var(--space-sm);
+    background-color: #0a0051;
+    font-weight: 800;
+}
+.expert-inner-number span:first-child{
+    margin-left: var(--space-xs);
+}
+
+@media screen and (min-width: 441px){
+    .expert-phone{
+        font-size: 27px;
+    }
+
+    .expert-name{
+        font-size: var(--fs-lg);
+    }
+
+    .expert-skill{
+        font-size: var(--fs-sm);
+    }
+    
+    .rubber-inner{
+        gap: calc((100% - 400px) / 3);
+    }
+}
+@media screen and (min-width: 1000px){
+    .rubber-inner{
+        gap: calc((100% - 500px) / 4);
+    }
+}
+
+#expert-1:checked ~ .experts-contact-container .expert-no-1,
+#expert-2:checked ~ .experts-contact-container .expert-no-2,
+#expert-3:checked ~ .experts-contact-container .expert-no-3,
+#expert-4:checked ~ .experts-contact-container .expert-no-4,
+#expert-5:checked ~ .experts-contact-container .expert-no-5,
+#expert-6:checked ~ .experts-contact-container .expert-no-6{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media screen and (min-width: 768px){
+    .experts-table-container{
+        flex-direction: row;
+        row-gap: 0;
+        column-gap: var(--space-lg);
+    }
+
+    .experts-table-container{
+        margin-bottom: 90px;
+    }
+}
+
+.rubber > * {
+    will-change: transform;
+}
+
+.rubber {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}

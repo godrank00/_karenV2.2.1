@@ -1,0 +1,16 @@
+.drag {
+    user-select: none;
+    scroll-snap-type: x mandatory;
+}
+
+.drag.active * {
+    cursor: grabbing;
+}
+.drag.active {
+    cursor: grabbing;
+}
+
+.drag * {
+    -webkit-user-drag: none;
+    user-drag: none;
+}

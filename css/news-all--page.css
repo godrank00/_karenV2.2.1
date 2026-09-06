@@ -1,0 +1,111 @@
+@import url('layout.css');
+@import url('normalize.css');
+@import url('reset.css');
+@import url('variables.css');
+@import url('fonts.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('menu.css');
+@import url('modal.css');
+@import url('drag.css');
+@import url('news-all-preview.css');
+@import url('loading.css');
+
+/* header */
+.main-heading{
+    margin-block: 32px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page-nav-ul{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.page-nav-ul li a{
+    color: #6d7a81;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-regular);
+    transition: 0.3s;
+}
+.page-nav-ul li:first-child a:after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 8px;
+    background: url(../assets/images/navigation-arrow.svg) center center no-repeat;
+    margin: 0px 10px;
+}
+
+.page-nav-ul li:last-child a{
+    color: #444c50;
+}
+
+.news--title{
+    font-size: var(--fs-lg);
+    font-weight: 800;
+    margin-block: 20px 30px;
+    min-height: 0;
+}
+#search-form{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.search-box{
+    background-color: #0a0051;
+    box-shadow: 0 26px 15px -20px #d7e2e0;
+    height: 56px;
+    width: 200px;
+    max-width: 100%;
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 0 23px 0 60px;
+    color: #fff;
+    font-weight: var(--fw-bold);
+    transition: 0.3s;
+    font-size: var(--fs-sm);
+}
+.search-box::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+.search-box:focus{
+    width: 210px;
+    transform: scale(1.01);
+}
+.search-box:focus ~ .search-submit{
+    transform: scale(1.01);
+}
+.search-submit{
+    position: absolute;
+    background: url(../assets/icons/search-icon.svg) center no-repeat;
+    width: 25px;
+    height: 25px;
+    left: 20px;
+    top: 15px;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 380px){
+    .search-box{
+        width: 300px;
+    }
+    .search-box:focus{
+        width: 310px;
+    }
+}
+@media screen and (min-width: 480px){
+    .search-box{
+        width: 430px;
+    }
+    .search-box:focus{
+        width: 440px;
+    }
+}
+
+/* news */

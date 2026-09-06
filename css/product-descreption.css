@@ -1,0 +1,223 @@
+
+.page-indicator{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 30px;
+    padding: 10px 0 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(7px);
+    position: sticky;
+    top: -35px;
+    align-self: flex-start;
+    height: auto;
+    z-index: 4;
+    color: #092939;
+}
+.indicator-buttons{
+    padding-inline: 60px;
+}
+.indicator-link{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 19px;
+    color: #A3B4BC;
+}
+.indicator-link:hover{
+    color: #092939;
+}
+.indicator-link::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 20px;
+    margin-top: 4px;
+    transition: 0.2s;
+    transform: scale(0);
+    background-color: #0a0051;
+    box-shadow: 0 3px 7px -1px #0a0051;
+}
+.indicator-icon{
+    width: fit-content;
+}
+.title-tab{
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+}
+.active{
+    color: #092939;
+}
+.active::after{
+    transform: scale(1) !important;
+}
+
+#content-block{
+    margin-block: var(--space-2xl);
+}
+#content-block p{
+    font-size: 14px;
+    font-weight: var(--fw-bold);
+    line-height: 41px;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+#content-block h2{
+    font-size: 19px;
+    font-weight: 800;
+    display: inline;
+    position: relative;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+}
+#content-block h2::before{
+    content: "";
+    position: absolute;
+    width: calc(100% - 350px);
+    left: 0;
+    height: 2px;
+    background-image: 
+    linear-gradient(to right, #ffffff 0%, transparent 120%),
+    repeating-linear-gradient(
+        to right,
+        #A3B4BC 0,
+        #A3B4BC 3px,
+        transparent 3px,
+        transparent 10px
+    );
+}
+.description-section{
+    margin-block: var(--space-2xl);
+}
+.description-section p:last-child{
+    margin-bottom: 20px !important;
+}
+
+@media screen and (max-width: 480px){
+    .indicator-buttons{
+        padding-inline: 30px;
+    }
+}
+
+#comment-block{
+    margin-block: 160px;
+}
+.comment-heading{
+    position: relative;
+    text-align: center;
+}
+.comment-heading div:first-child{
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #0a0051;
+}
+.comment-heading div:last-child{
+    font-size: 14px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 10px;
+    color: #092939;
+}
+.comment-heading::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 40px;
+    background-color: #cfd9de;
+    margin: 20px auto 0;
+}
+
+.comment-write{
+    margin-block: 40px 55px;
+    position: relative;
+    z-index: 3;
+    border: 1px solid #cfd9de;
+    border-radius: 20px;
+    line-height: 25px;
+}
+.write-aria{
+    padding: 30px 40px;
+    width: 100%;
+}
+#comment{
+    color: #767e88;
+    font-size: var(--fs-base);
+    font-weight: 500;
+    border: none;
+    outline: none;
+    resize: none;
+    height: 60px;
+    width: 100%;
+    line-height: 25px;
+}
+.form-fill-send{
+    padding: 0 24px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-inputs{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    flex: 1 1 0;
+}
+.comment-inputs input{
+    border-radius: 15px;
+    border: 1px solid #cfd9de;
+    display: block;
+    padding: 11px 20px;
+    width: 100%;
+}
+.comment-submit{
+    position: relative;
+    font-size: 16px;
+    font-weight: var(--fw-bold);
+    white-space: nowrap;
+    margin-right: var(--space-xl);
+    margin-left: var(--space-sm);
+    margin: 12px 12px 0 12px;
+}
+.comment-submit::after{
+    content: "";
+    width: 32px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../assets/icons/send-icon.svg) center left no-repeat;
+}
+
+@media screen and (min-width: 460px){
+    .comment-submit{
+        align-self: flex-end;
+        margin-bottom: 12px;
+    }
+    .form-fill-send{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 640px){
+    .comment-inputs{ 
+        flex-direction: row;
+        gap: var(--space-md);
+    } 
+    .comment-submit{
+        align-self: auto;
+        margin: 0 32px 0 8px;
+    }     
+    #comment{
+        height: 100px;
+    }
+}

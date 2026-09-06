@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  -webkit-user-drag: none;
+  user-select: none;       
+  -webkit-user-select: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary, #1e3a8a);
+  outline-offset: 3px;
+}
+a, button, input, textarea, label {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.global-glow {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle, 
+        rgba(10, 0, 81, 0.4) 0%, 
+        rgba(10, 0, 81, 0.15) 50%, 
+        rgba(10, 0, 81, 0) 100%
+    );
+    filter: blur(8px);
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.3);
+    z-index: 999999;
+    animation: pureGlowAnimation 0.45s ease-out forwards;
+}
+
+@keyframes pureGlowAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(0.3);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2.2);
+        opacity: 0;
+    }
+}

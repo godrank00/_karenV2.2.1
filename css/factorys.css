@@ -1,0 +1,40 @@
+.factory-logos-container{
+    margin-bottom: 65px;
+}
+.factory-bsckground-container{
+    background-color: var(--bg-main);
+}
+.factory-logos{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: var(--space-md);
+    padding-block: var(--space-xl);
+}
+.factory-logos::after{
+    content: "";
+    z-index: -10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+}
+
+.factory{
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (min-width: 768px){
+    .factory-logos{
+        gap: 0;
+    }
+    .factory{
+        width: 70px;
+        height: 70px;
+    }
+}
