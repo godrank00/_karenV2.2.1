@@ -1,0 +1,106 @@
+.categories-container{
+    max-width: 1658px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+.container-main{
+    max-width: 1320px;
+    flex: 0 2 auto;
+}
+.product-filter{
+    width: 270px; 
+    height: fit-content;
+    position: sticky;
+    top: 32px;
+    border-radius: var(--radius-lg);
+    border: 1px solid #d5dcdf;
+    flex: 0 0 auto;
+    padding-inline: 20px;
+}
+.filter-title{
+    padding: 16px 0;
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-regular);
+    color: #3f4064;
+}
+.filter-item{
+    padding-block: 12px;
+    width: 100%;
+    border-bottom: 1px solid #E8EBED;
+    position: relative;
+}
+.filter-item:last-child{
+    border-bottom: none;
+}
+.filter-item select{
+    width: 100%;
+    outline: none;
+    background: #FFF;
+    border-radius: 12px;
+    height: 43px;
+    color: #091E28;
+    font-size: 14px;
+    padding-right: 4px;
+    font-weight: var(--fw-bold);
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+.filter-item select:focus ~ .arrow-down{
+    transform: rotate(180deg);
+}
+.arrow-down{
+    position: absolute;
+    top: calc(50% - 7px);
+    left: 4px;
+    transition: all .2s;
+    pointer-events: none;
+}
+.tax-field{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#tax{
+    display: none;
+}
+.label-btn{
+    width: 31.5px;
+    height: 19px;
+    border-radius: 15px;
+    background: #D9D9D9;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+.toggle{
+    background: #ffffff;
+    width: 13px;
+    height: 13px;
+    border-radius: 15px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: 0.3s;
+}
+#tax:checked ~ .label-btn .toggle{
+    left: 16px;
+}
+#tax:checked ~ .label-btn{
+    background: #00c86f;
+}
+.tax-title{
+    height: 43px;
+    color: #091E28;
+    font-size: 14px;
+    padding-right: 4px;
+    font-weight: var(--fw-bold);
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 980px){
+    .product-filter{
+        width: 180px; 
+    }
+}
